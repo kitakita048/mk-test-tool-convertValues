@@ -1,0 +1,6 @@
+*.log
+.cache
+node_modules/
+testing
+jest.config.js
+babel.config.js

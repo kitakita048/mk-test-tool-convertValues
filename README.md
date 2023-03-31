@@ -27,18 +27,53 @@ The types that can be specified for the third argument are as follows
 
 
 ### jest
+
+####  test function 
+```js
+function demoFunc(obj){
+  return obj.text === typeof('string') ? true : false
+}
+```
 ```js
 import converValues from 'mk-test-tool-convert-values'
-const myAry = [
+import demoFunc from '..'
+
+const testCasesTrue = [
   {
-    id:1,
-    name:'hoge',
-    date:'2020-03-04'
+    testData:[
+      {
+        name:'john'
+      },
+    ],
+    keys:['name'],
+    type:'string',
+    expected:true
   }
 ]
-const keys = ['id','name','date']
-const type = 'string'
-const convertAry = converValues(myAry,keys,type)
+describe('test demoFunc true', () => {
+  test.each(testCases)('「$type」',({testData,type,keys,expected}) =>{
+    expect(demoFunc(convertValues(testData,keys,type))).toBe(expected)
+  })
+});
+
+const testCasesFalse = [
+  {
+    testData:[
+      {
+        name:'john'
+      },
+    ],
+    keys:['name'],
+    type:'number',
+    expected:false
+  }
+]
+describe('test demoFunc false', () => {
+  test.each(testCases)('「$type」',({testData,type,keys,expected}) =>{
+    expect(demoFunc(convertValues(testData,keys,type))).toBe(expected)
+  })
+});
+
 ```
 
 ## Licence

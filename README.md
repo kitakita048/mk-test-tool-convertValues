@@ -1,12 +1,13 @@
 # mk-test-tool-convert-values
 
-## install
+## Install
 
 ```
 npm install mk-test-tool-convert-values
 ```
 
 ## Usage
+This package changes the Type of test data required for unit testing of anomalous systems, and provides support for testing to determine whether the target function is capable of handling anomalous systems.
 
 This package converts the `Object[]` set in the first argument to any type.
 The second argument is a `String[]` with the key you want to convert from the object you put in the first argument
@@ -25,9 +26,9 @@ The types that can be specified for the third argument are as follows
 |  `'regexp'`  |  `Regexp`  |
 
 
-JavaScript 
+### jest
 ```js
-import converValues from 'mk-test-tool-convertvalues'
+import converValues from 'mk-test-tool-convert-values'
 const myAry = [
   {
     id:1,

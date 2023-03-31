@@ -31,7 +31,7 @@ The types that can be specified for the third argument are as follows
 ####  test function 
 ```js
 function demoFunc(obj){
-  return obj.text === typeof('string') ? true : false
+  return obj.name === typeof('string') ? true : false
 }
 ```
 ```js

@@ -31,9 +31,11 @@ The types that can be specified for the third argument are as follows
 ####  test function 
 ```js
 function demoFunc(obj){
-  return obj.name === typeof('string') ? true : false
+  return typeof obj.name === 'string' ? true : false
 }
 ```
+
+#### jest
 ```js
 import converValues from 'mk-test-tool-convert-values'
 import demoFunc from '..'
